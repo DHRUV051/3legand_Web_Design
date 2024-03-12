@@ -3,12 +3,20 @@ import Shipping from "../../../public/Home/fast delivery.png";
 import Call from "../../../public/Home/call.png";
 import Lock from "../../../public/Home/lock.png";
 import Money from "../../../public/Home/money.png";
+import clsx from "clsx";
+import { forwardRef } from "react";
 
-const Feactures = () => {
+const Feactures = ({ inView }, ref) => {
   return (
     <main className="px-[32px] md:px-[60px] lg:px-[160px]">
-      <section className="py-[32px] md:py-[48px] grid lg:grid-cols-4 grid-cols-2 md:gap-[24px] gap-x-[8px] gap-y-[24px]">
-        <div className="bg-[rgb(243,245,247)] px-[16px] py-[32px] md:px-[16px] md:py-[32px] space-y-[16px]">
+      <section
+        ref={ref}
+        className={clsx(
+          "py-[32px] md:py-[48px] grid lg:grid-cols-4 grid-cols-2 md:gap-[24px] gap-x-[8px] gap-y-[24px]",
+          ` transition-opacity ${inView ? "fadeIn" : ""}`
+        )}
+      >
+        <div className="bg-[rgb(243,245,247)] px-[16px] py-[32px] md:px-[16px] md:py-[32px] space-y-[16px] ">
           <Image
             src={Shipping}
             alt=""
@@ -87,4 +95,4 @@ const Feactures = () => {
   );
 };
 
-export default Feactures;
+export default  forwardRef(Feactures);

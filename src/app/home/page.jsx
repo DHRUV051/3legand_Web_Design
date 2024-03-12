@@ -27,7 +27,7 @@ export default function Home() {
 
       <ProductItem ref={ref} inView={inView} />
 
-      <Feactures />
+      <Feactures  ref={ref} inView={inView}/>
 
       <ImageCard />
 

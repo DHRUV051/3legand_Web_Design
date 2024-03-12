@@ -24,18 +24,17 @@ const ProductItem = ({ inView }, ref) => {
           </div>
         </div>
 
-        <div className={clsx("flex flex-col bg-white m-auto p-auto")}>
+        <div
+          className={clsx(
+            "flex flex-col bg-white m-auto p-auto",
+            `transition-opacity ${inView ? "FADEINCARD" : ""}`
+          )}
+        >
           <div
             className="flex overflow-x-scroll overflow-y-clip pb-10"
             id="scroll"
           >
-            <div
-              ref={ref}
-              className={clsx(
-                "flex flex-nowrap",
-                `transition-opacity ${inView ? "FADEINCARD" : ""}`
-              )}
-            >
+            <div ref={ref} className={clsx("flex flex-nowrap")}>
               {Product.map((item, index) => (
                 <ProductList key={index} item={item} />
               ))}

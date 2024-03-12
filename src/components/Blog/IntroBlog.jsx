@@ -7,7 +7,7 @@ const IntroBlog = () => {
   let pathname = usePathname();
   pathname = pathname.split("/");
   return (
-    <main className=" md:mx-[60px] lg:mx-[160px] bg-[url('/Blog/IntroImage.png')] md:bg-cover 
+    <main className="mx-[32px] md:mx-[60px] lg:mx-[160px] bg-[url('/Blog/IntroImage.png')] md:bg-cover 
     md:h-[392px] h-[300px] bg-no-repeat bg-center flex flex-item justify-center items-center bg-white">
       <section className="space-y-[24px]">
         <div className="flex items-center justify-center space-x-4">

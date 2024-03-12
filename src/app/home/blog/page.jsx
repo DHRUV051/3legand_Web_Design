@@ -1,13 +1,15 @@
+import IntroBlog from "@/components/Blog/IntroBlog";
+import Last from "@/components/Blog/Last";
 import Product from "@/components/Blog/Product";
-import IntroBlog from "../../../components/Blog/IntroBlog";
 
-const page = () => {
+const BlogPage = () => {
   return (
-    <main className="">
-      <IntroBlog/>
+    <main className="pt-4">
+      <IntroBlog />
       <Product />
+      <Last />
     </main>
   );
 };
 
-export default page;
+export default BlogPage;

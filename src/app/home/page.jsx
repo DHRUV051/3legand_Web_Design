@@ -8,7 +8,7 @@ import Feactures from "../../components/Home/Feactures";
 import ImageCard from "../../components/Home/ImageCard";
 import { useInView } from "react-intersection-observer";
 import Articles from "../../components/Home/Articles";
-import Last from "../../components/Home/Last";
+import Last from "../../components/Blog/Last";
 
 
 export default function Home() {

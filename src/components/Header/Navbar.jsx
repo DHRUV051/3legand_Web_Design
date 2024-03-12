@@ -48,7 +48,7 @@ const Navbar = () => {
             menu
               ? "translate-x-0 transition-all bg-white flex-col  fixed right-0 top-0 h-screen medium:w-1/2 w-full z-50 flex"
               : "translate-x-full bg-white flex z-50 flex-col top-0 right-0  w-full h-full  fixed ",
-            "p-[24px] ease-in-out  duration-[500ms] "
+            "p-[24px] ease-in-out  duration-500"
           )}
         >
           <div className="flex justify-betweena+">

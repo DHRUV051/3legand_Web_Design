@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Article1 from "../../../public/Blog/Article1.png";
-import Article2 from "../../../public/Blog/Article2.png";
-import Article3 from "../../../public/Blog/Article3.png";
-import Article from "../../../public/Blog/Article.png";
+import Article1 from "../../../public/BlogPost/Article1.png";
+import Article2 from "../../../public/BlogPost/Article2.png";
+import Article3 from "../../../public/BlogPost/Article3.png";
+import Article from "../../../public/BlogPost/Article.png";
 
 const Blog = ({ blogId }) => {
   return (

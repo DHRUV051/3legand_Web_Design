@@ -149,6 +149,19 @@
 }
 
 
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation: fade-out 0.5s ease-out;
+}
+
 
 #scroll::-webkit-scrollbar {
   width: 1em;
@@ -171,3 +184,4 @@
   -webkit-appearance: none;
   display: none;
 }
+

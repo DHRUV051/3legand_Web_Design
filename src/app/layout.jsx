@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/Footer/Footer";
-import { Sen } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster"
 
 const Font = Poppins({
   subsets: ["latin"],
@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={Font.className}>
         <Header />
         {children}
+        <Toaster />
         <Footer />
       </body>
     </html>

@@ -1,91 +1,123 @@
-'use client'
+"use client";
 
 import {
-    Table,
-    TableBody,
-    TableCaption,
-    TableCell,
-    TableFooter,
-    TableHead,
-    TableHeader,
-    TableRow,
-  } from "@/components/ui/table"
-  
-  const invoices = [
-    {
-      invoice: "INV001",
-      paymentStatus: "Paid",
-      totalAmount: "$250.00",
-      paymentMethod: "Credit Card",
-    },
-    {
-      invoice: "INV002",
-      paymentStatus: "Pending",
-      totalAmount: "$150.00",
-      paymentMethod: "PayPal",
-    },
-    {
-      invoice: "INV003",
-      paymentStatus: "Unpaid",
-      totalAmount: "$350.00",
-      paymentMethod: "Bank Transfer",
-    },
-    {
-      invoice: "INV004",
-      paymentStatus: "Paid",
-      totalAmount: "$450.00",
-      paymentMethod: "Credit Card",
-    },
-    {
-      invoice: "INV005",
-      paymentStatus: "Paid",
-      totalAmount: "$550.00",
-      paymentMethod: "PayPal",
-    },
-    {
-      invoice: "INV006",
-      paymentStatus: "Pending",
-      totalAmount: "$200.00",
-      paymentMethod: "Bank Transfer",
-    },
-    {
-      invoice: "INV007",
-      paymentStatus: "Unpaid",
-      totalAmount: "$300.00",
-      paymentMethod: "Credit Card",
-    },
-  ]
-  
-const TableDemo = ()  => {
-    return (
-      <Table>
-        <TableCaption>A list of your recent invoices.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {invoices.map((invoice) => (
-            <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
-              <TableCell>{invoice.paymentStatus}</TableCell>
-              <TableCell>{invoice.paymentMethod}</TableCell>
-              <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
+const Data = [
+  {
+    id: 1,
+    numberId: "#3456_768",
+    Date: "October 17, 2023",
+    Status: "Delivered",
+    Price: "$1234.00",
+  },
+  {
+    id: 2,
+    numberId: "#3456_980",
+    Date: "October 11, 2023",
+    Status: "Delivered",
+    Price: "$345.00",
+  },
+  {
+    id: 3,
+    numberId: "#3456_120",
+    Date: "August 24, 2023",
+    Status: "Delivered",
+    Price: "$2345.00",
+  },
+  {
+    id: 4,
+    numberId: "#3456_030",
+    Date: "August 12, 2023",
+    Status: "Delivered",
+    Price: "$845.00",
+  },
+];
+
+const TableDemo = () => {
+  return (
+    <main className="w-full">
+      <section className="mb-[40px]">
+        <h1 className="text-[18px] leading-[28px] table:text-[20px] table:leading-[32px] font-semibold table:ml-4">
+          Orders History
+        </h1>
+      </section>
+      <section className="hidden table:block mx-auto">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Number ID</TableHead>
+              <TableHead>Dates</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead>Price</TableHead>
             </TableRow>
+          </TableHeader>
+
+          <TableBody>
+            {Data.map((item, index) => (
+              <TableRow
+                key={index}
+                className="font-medium text-[14px] leading-[22px]"
+              >
+                <TableCell >{item.numberId}</TableCell>
+                <TableCell>{item.Date}</TableCell>
+                <TableCell>{item.Status}</TableCell>
+                <TableCell>{item.Price}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </section>
+      <section className="w-full table:hidden">
+        <div className="w-full divide-y">
+          {Data.map((item, index) => (
+            <div key={index} className="py-[16px]">
+              <div className="flex w-full">
+                <h1 className="w-1/2 text-[14px] leading-[22px] font-medium text-[rgb(108,114,117)]">
+                  Number ID
+                </h1>
+                <h1 className="w-1/2 text-left text-[14px] leading-[22px] font-medium text-[rgb(20,23,24)]">
+                  {item.numberId}
+                </h1>
+              </div>
+              <div className="flex w-full">
+                <h1 className="w-1/2 text-[14px] leading-[22px] font-medium text-[rgb(108,114,117)]">
+                  Dates
+                </h1>
+                <h1 className="w-1/ text-left text-[14px] leading-[22px] font-medium text-[rgb(20,23,24)]">
+                  {item.Date}
+                </h1>
+              </div>
+              <div className="flex w-full">
+                <h1 className="w-1/2 text-[14px] leading-[22px] font-medium text-[rgb(108,114,117)]">
+                  Status
+                </h1>
+                <h1 className="w-1/ text-left text-[14px] leading-[22px] font-medium text-[rgb(20,23,24)]">
+                  {item.Status}
+                </h1>
+              </div>
+              <div className="flex w-full">
+                <h1 className="w-1/2 text-[14px] leading-[22px] font-medium text-[rgb(108,114,117)]">
+                  Price
+                </h1>
+                <h1 className="w-1/ text-left text-[14px] leading-[22px] font-medium text-[rgb(20,23,24)]">
+                  {item.Price}
+                </h1>
+              </div>
+            </div>
           ))}
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell colSpan={3}>Total</TableCell>
-            <TableCell className="text-right">$2,500.00</TableCell>
-          </TableRow>
-        </TableFooter>
-      </Table>
-    )
-  }
-  
-  export default TableDemo
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default TableDemo;

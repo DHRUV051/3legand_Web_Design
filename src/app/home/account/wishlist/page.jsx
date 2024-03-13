@@ -3,9 +3,10 @@ import React from "react";
 import Link from "next/link";
 
 import ProfileCard from "@/components/Account/ProfileCard";
-import TableDemo, { Table } from "@/components/Account/OrderTable";
+import Wishlist from "@/components/Account/Wishlist";
 
-const AccountPage = () => {
+
+const WishlistPage = () => {
   return (
     <main className="px-[32px] md:px-[60px] lg:px-[160px]">
       <section>
@@ -24,7 +25,7 @@ const AccountPage = () => {
         <ProfileCard />
 
         <div className="lg:pl-[172px]  lg:col-span-9 w-full">
-          <TableDemo />
+          <Wishlist />
         </div>
       </section>
     </main>
@@ -32,4 +33,4 @@ const AccountPage = () => {
 };
 
 // Export the component
-export default AccountPage;
+export default WishlistPage;

@@ -23,8 +23,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
   let pathname = usePathname();
 
-  pathname = pathname.split("/")
-
+  pathname = pathname.split("/");
 
   return (
     <main className="px-[32px] py-[18px] md:px-[60px] lg:px-[160px] w-full flex items-center justify-between ">
@@ -112,8 +111,7 @@ const Navbar = () => {
                   <Image
                     src={Bag}
                     alt=""
-                    width=""
-                    height=""
+                    style={{ width: "auto" }}
                     className="cursor-pointer"
                   />
                   <div className="bg-[rgb(20,23,24)] text-white rounded-full px-[12px] py-[4px] scale-[0.60] -ml-1">
@@ -161,10 +159,13 @@ const Navbar = () => {
               key={index}
               className="font-medium text-[16px] text-[rgb(108,114,117)] leading-[24px]"
             >
-     
               <Link
                 href={item.href}
-                className={`/${pathname[1]}` === `${item.href}` ? "text-[rgb(20,23,24)]" : ""}
+                className={
+                  `/${pathname[1]}` === `${item.href}`
+                    ? "text-[rgb(20,23,24)]"
+                    : ""
+                }
               >
                 {item.name}
               </Link>

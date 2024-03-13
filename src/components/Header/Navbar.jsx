@@ -185,13 +185,15 @@ const Navbar = () => {
           />
         </div>
         <div className="mt-1">
-          <Image
-            src={User}
-            alt=""
-            width=""
-            height=""
-            className="hidden md:block cursor-pointer"
-          />
+          <Link href={"/home/account"}>
+            <Image
+              src={User}
+              alt=""
+              width=""
+              height=""
+              className="hidden md:block cursor-pointer"
+            />
+          </Link>
         </div>
         <div className="flex">
           <Image

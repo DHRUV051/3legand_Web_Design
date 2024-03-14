@@ -40,8 +40,6 @@ const Wishlist = () => {
     }
   };
 
-  const Add = () => {};
-
   return (
     <main>
       <section className="mb-[40px]">
@@ -292,10 +290,12 @@ const Wishlist = () => {
         >
           <div className={clsx(button1 ? "" : "hidden", "py-[16px]")}>
             <div className="flex items-center flex-row pb-[16px]">
-              <button onClick={() => {
-                Close(1);
-                toast({ title: "Tray Table Removed" });
-              }}>
+              <button
+                onClick={() => {
+                  Close(1);
+                  toast({ title: "Tray Table Removed" });
+                }}
+              >
                 <IoClose
                   size={24}
                   className="mr-[10px]  text-[rgb(108,114,117)]"
@@ -334,10 +334,12 @@ const Wishlist = () => {
 
           <div className={clsx(button2 ? "" : "hidden", "py-[16px]")}>
             <div className="flex items-center flex-row pb-[16px]">
-              <button onClick={() => {
-                Close(2);
-                toast({ title: "Sofa Removed" });
-              }}>
+              <button
+                onClick={() => {
+                  Close(2);
+                  toast({ title: "Sofa Removed" });
+                }}
+              >
                 <IoClose
                   size={24}
                   className="mr-[10px]  text-[rgb(108,114,117)]"
@@ -376,10 +378,12 @@ const Wishlist = () => {
 
           <div className={clsx(button3 ? "" : "hidden", "py-[16px]")}>
             <div className="flex items-center flex-row pb-[16px]">
-              <button onClick={() => {
-                Close(3);
-                toast({ title: "Bamboo basket Removed" });
-              }}>
+              <button
+                onClick={() => {
+                  Close(3);
+                  toast({ title: "Bamboo basket Removed" });
+                }}
+              >
                 <IoClose
                   size={24}
                   className="mr-[10px]  text-[rgb(108,114,117)]"
@@ -418,10 +422,12 @@ const Wishlist = () => {
 
           <div className={clsx(button4 ? "" : "hidden", "py-[16px]")}>
             <div className="flex items-center flex-row pb-[16px]">
-              <button onClick={() =>{ 
-                Close(4)
-                toast({ title: "Pillow Removed" })
-                }}>
+              <button
+                onClick={() => {
+                  Close(4);
+                  toast({ title: "Pillow Removed" });
+                }}
+              >
                 <IoClose
                   size={24}
                   className="mr-[10px]  text-[rgb(108,114,117)]"

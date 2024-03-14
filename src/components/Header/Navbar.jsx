@@ -103,22 +103,26 @@ const Navbar = () => {
 
           <div className="mt-[95px] space-y-[19.33px]">
             <div>
+              <Link href="/home/cart">
               <div className="flex justify-between pb-[10px] border-b-2 border-[rgb(232,236,239)]">
                 <h1 className="text-[rgb(108,114,117)] font-medium text-[18px] leading-[32px]">
                   Cart
                 </h1>
                 <div className="flex">
-                  <Image
-                    src={Bag}
-                    alt=""
-                    style={{ width: "auto" }}
-                    className="cursor-pointer"
-                  />
+                        
+                    <Image
+                      src={Bag}
+                      alt=""
+                      style={{ width: "auto" }}
+                      className="cursor-pointer"
+                    />
+               
                   <div className="bg-[rgb(20,23,24)] text-white rounded-full px-[12px] py-[4px] scale-[0.60] -ml-1">
                     2
                   </div>
                 </div>
               </div>
+              </Link>
 
               <div className="mt-[8px] flex justify-between pb-[10px] border-b-2 border-[rgb(232,236,239)]">
                 <h1 className="text-[rgb(108,114,117)] font-medium text-[18px] leading-[32px]">
@@ -195,7 +199,8 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="flex">
+        <div className="flex mt-1">
+          <Link href="/home/cart">
           <Image
             src={Bag}
             alt=""
@@ -203,7 +208,8 @@ const Navbar = () => {
             height=""
             className="cursor-pointer"
           />
-          <div className=" bg-[rgb(20,23,24)] text-white flex items-center rounded-full px-[12px] py-[4px] scale-[0.60] ">
+          </Link>
+          <div className="-mt-1 bg-[rgb(20,23,24)] text-white flex items-center rounded-full px-[12px] py-[4px] scale-[0.60] ">
             2
           </div>
         </div>

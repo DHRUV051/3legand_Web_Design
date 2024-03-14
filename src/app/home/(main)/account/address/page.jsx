@@ -1,23 +1,15 @@
-// Import required modules
-"use client"
+"use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { IoCameraOutline } from "react-icons/io5";
-import { useForm } from "react-hook-form";
-import Account from "@/components/Account/Account";
-import { Input } from "../../../components/ui/input";
-import { Button } from "../../../components/ui/button";
-import AccountDetailsForm from "@/components/Account/AccountDetails";
+import AddressCard from "@/components/Account/AddressCard";
 import ProfileCard from "@/components/Account/ProfileCard";
 
 // Define the component
 const AccountPage = () => {
-  
-
   // Return the component JSX
   return (
     <main className="px-[32px] md:px-[60px] lg:px-[160px]">
+        
       <section>
         <div>
           <Link href="/home">
@@ -30,13 +22,13 @@ const AccountPage = () => {
           </h1>
         </div>
       </section>
-      <section className="pb-[80px] grid lg:grid-cols-12  grid-cols-1">
+
+      <section className="pb-[80px] grid lg:grid-cols-12 grid-cols-1">
         <ProfileCard />
 
-        <div className="lg:ml-[172px] lg:col-span-9">
-            <AccountDetailsForm />
+        <div className="lg:pl-[72px] lg:col-span-9 w-full">
+          <AddressCard />
         </div>
-        
       </section>
     </main>
   );
